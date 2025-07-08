@@ -4,67 +4,45 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ACH DataWorks Consulting</title>
+  <link rel="icon" type="image/png" href="images/logo.png" />
   <style>
-    html, body {
+    * {
       margin: 0;
       padding: 0;
-      width: 100%;
+      box-sizing: border-box;
     }
+
+    html, body {
+      max-width: 100vw;
+      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+    }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f7f9fc;
-      color: #333;
+      background: url('images/background.png') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     .hero {
-      position: relative;
-      width: 100vw;
-      left: 50%;
-      right: 50%;
-      margin-left: -50vw;
-      margin-right: -50vw;
-      min-height: calc(100vh - 160px);
-      background-image: url('images/background.jpg');
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       text-align: center;
-      padding: 4rem 2rem;
       color: white;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 0;
-    }
-
-    .hero h1, .hero p, .hero button {
-      position: relative;
-      z-index: 1;
+      padding: 4rem 1rem;
+      margin-top: auto;
+      flex-grow: 1;
     }
 
     .hero h1 {
-      font-size: 2.75rem;
+      font-size: 2.5rem;
       margin-bottom: 1rem;
-      transition: transform 0.3s ease;
-    }
-
-    .hero h1:hover {
-      transform: scale(1.05);
     }
 
     .hero p {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       max-width: 600px;
+      margin: 0 auto 1.5rem;
       transition: transform 0.3s ease;
     }
 
@@ -74,54 +52,5 @@
 
     .button {
       display: inline-block;
-      margin-top: 2rem;
-      background-color: #00c49a;
-      color: white;
       padding: 0.75rem 1.5rem;
-      text-decoration: none;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-
-    .button:hover {
-      background-color: #00a681;
-      transform: scale(1.05);
-    }
-  </style>
-</head>
-<body>
-  <div id="header"></div>
-
-  <section class="hero">
-    <h1>Turning Data into Direction</h1>
-    <p>ACH DataWorks helps small businesses and creators make smarter decisions through clear, actionable analytics.</p>
-    <button class="button" onclick="openModal()">Get a Free Data Audit</button>
-  </section>
-
-  <div id="footer"></div>
-  <div id="contactBox"></div>
-
-  <script>
-    async function loadHTML(id, file) {
-      const res = await fetch(file);
-      const html = await res.text();
-      document.getElementById(id).innerHTML = html;
-    }
-
-    loadHTML("header", "header.html");
-    loadHTML("footer", "footer.html");
-    loadHTML("contactBox", "contact-modal.html");
-
-    function openModal() {
-      document.getElementById("contactModal").style.display = "flex";
-    }
-
-    function closeModal() {
-      document.getElementById("contactModal").style.display = "none";
-    }
-  </script>
-</body>
-</html>
+      background-co
