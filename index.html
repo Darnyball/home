@@ -15,6 +15,7 @@
       background-color: #f7f9fc;
       color: #333;
     }
+
     .hero {
       position: relative;
       width: 100vw;
@@ -34,6 +35,7 @@
       padding: 4rem 2rem;
       color: white;
     }
+
     .hero::before {
       content: "";
       position: absolute;
@@ -44,26 +46,32 @@
       background-color: rgba(0, 0, 0, 0.5);
       z-index: 0;
     }
-    .hero h1, .hero p, .hero a {
+
+    .hero h1, .hero p, .hero button {
       position: relative;
       z-index: 1;
     }
+
     .hero h1 {
       font-size: 2.75rem;
       margin-bottom: 1rem;
       transition: transform 0.3s ease;
     }
+
     .hero h1:hover {
       transform: scale(1.05);
     }
+
     .hero p {
       font-size: 1.3rem;
       max-width: 600px;
       transition: transform 0.3s ease;
     }
+
     .hero p:hover {
       transform: scale(1.03);
     }
+
     .button {
       display: inline-block;
       margin-top: 2rem;
@@ -71,11 +79,13 @@
       color: white;
       padding: 0.75rem 1.5rem;
       text-decoration: none;
+      border: none;
       border-radius: 5px;
-      z-index: 1;
-      position: relative;
+      font-size: 1rem;
+      cursor: pointer;
       transition: background-color 0.3s ease, transform 0.3s ease;
     }
+
     .button:hover {
       background-color: #00a681;
       transform: scale(1.05);
@@ -88,10 +98,11 @@
   <section class="hero">
     <h1>Turning Data into Direction</h1>
     <p>ACH DataWorks helps small businesses and creators make smarter decisions through clear, actionable analytics.</p>
-    <a class="button" href="#" onclick="openModal()">Get a Free Data Audit</a>
+    <button class="button" onclick="openModal()">Get a Free Data Audit</button>
   </section>
 
   <div id="footer"></div>
+  <div id="contactBox"></div>
 
   <script>
     async function loadHTML(id, file) {
@@ -102,26 +113,12 @@
 
     loadHTML("header", "header.html");
     loadHTML("footer", "footer.html");
-  </script>
+    loadHTML("contactBox", "contact-modal.html");
 
-  <!-- Contact Modal -->
-  <div id="contactModal" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.6); z-index:1000; justify-content:center; align-items:center;">
-    <div style="background:white; padding:2rem; max-width:400px; border-radius:8px; color:#333; position:relative;">
-      <h2>Send a Message</h2>
-      <form action="https://formsubmit.co/contact@achdataworks.com" method="POST">
-        <input type="text" name="name" placeholder="Your name" required style="width:100%; margin-bottom:1rem; padding:0.5rem;" />
-        <input type="email" name="email" placeholder="Your email" required style="width:100%; margin-bottom:1rem; padding:0.5rem;" />
-        <textarea name="message" placeholder="Your message" required style="width:100%; height:100px; margin-bottom:1rem; padding:0.5rem;"></textarea>
-        <button type="submit" style="background:#0077cc; color:white; border:none; padding:0.75rem 1.5rem; border-radius:4px;">Send</button>
-      </form>
-      <button onclick="closeModal()" style="position:absolute; top:10px; right:10px; background:none; border:none; font-size:1.2rem; color:#333;">×</button>
-    </div>
-  </div>
-
-  <script>
     function openModal() {
       document.getElementById("contactModal").style.display = "flex";
     }
+
     function closeModal() {
       document.getElementById("contactModal").style.display = "none";
     }
