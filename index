@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACH DataWorks Consulting</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f7f9fc;
+      color: #333;
+    }
+    header {
+      background-color: #0077cc;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+      position: relative;
+    }
+    nav a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+    }
+    .hero {
+      position: relative;
+      min-height: calc(100vh - 160px); /* full height minus header/footer */
+      background-image: url('A_digital_graphic_design_showcases_data_and_analyt.png');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4rem 2rem;
+      color: white;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+    .hero h1, .hero p, .hero a {
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
+      font-size: 2.75rem;
+      margin-bottom: 1rem;
+      transition: transform 0.3s ease;
+    }
+    .hero h1:hover {
+      transform: scale(1.05);
+    }
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 600px;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 2rem;
+      background-color: #00c49a;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    section {
+      padding: 3rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #0077cc;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      position: relative;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>ACH DataWorks</strong></div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Turning Data into Direction</h1>
+    <p>ACH DataWorks helps small businesses and creators make smarter decisions through clear, actionable analytics.</p>
+    <a class="button" href="#contact">Get a Free Data Audit</a>
+  </section>
+
+  <section id="services">
+    <h2>What We Offer</h2>
+    <ul>
+      <li><strong>Performance Analytics</strong> – Track and understand your content or business performance</li>
+      <li><strong>Growth Insights</strong> – Uncover trends, optimize strategy, forecast outcomes</li>
+      <li><strong>Automation & Reporting</strong> – Set up smart, repeatable tracking systems</li>
+      <li><strong>Custom Consulting</strong> – Personalized help making sense of your data</li>
+    </ul>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>Hi, I'm the founder of ACH DataWorks. I'm a finance major passionate about helping creators and small teams unlock insights from their data. My goal is simple: give you clarity, fast. No fluff, no BS — just direction.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Ready to work together?</p>
+    <p>Email: <a href="mailto:hello@achdataworks.com">hello@achdataworks.com</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ACH DataWorks Consulting | Cincinnati, OH</p>
+  </footer>
+</body>
+</html>
