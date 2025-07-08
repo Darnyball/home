@@ -13,6 +13,12 @@ body {
   margin: 0;
 }
 
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 /* === Header === */
 header {
   background-color: #1d3557;
@@ -59,13 +65,13 @@ header {
   background: url('images/background.jpg') center center / cover no-repeat;
   color: #fff;
   position: relative;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  height: calc(100vh - 160px); /* adjust this if needed */
+  flex: 1;
+  height: auto;
+  min-height: calc(100vh - 140px); /* adjust based on header + footer height */
 }
 
 .hero::before {
