@@ -1,4 +1,4 @@
-/* Reset and base */
+/* === Reset and Base === */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +12,7 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
+/* === Header === */
 header {
   background-color: #1d3557;
   color: #fff;
@@ -43,7 +43,6 @@ header {
   color: #a8dadc;
 }
 
-/* Hamburger for mobile */
 .hamburger {
   display: none;
   font-size: 1.8rem;
@@ -51,7 +50,7 @@ header {
   color: #fff;
 }
 
-/* Hero Section */
+/* === Hero Section (Index) === */
 .hero {
   text-align: center;
   padding: 6rem 2rem;
@@ -66,7 +65,7 @@ header {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* dark overlay for text readability */
+  background: rgba(0, 0, 0, 0.5);
   z-index: 0;
 }
 
@@ -75,6 +74,11 @@ header {
 .hero .cta-button {
   position: relative;
   z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 .tagline {
@@ -97,7 +101,80 @@ header {
   background-color: #d62828;
 }
 
-/* Modal */
+/* === Services Page === */
+.services-page {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.services-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.services-hero h1 {
+  font-size: 2.5rem;
+  color: #1d3557;
+  margin-bottom: 0.5rem;
+}
+
+.services-hero p {
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background-color: #fff;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.03);
+  transition: transform 0.2s ease;
+}
+
+.service-card h2 {
+  color: #1d3557;
+  margin-bottom: 1rem;
+}
+
+.service-card p {
+  color: #444;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+/* === About Page === */
+.about-page {
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.about-page h1 {
+  font-size: 2.5rem;
+  color: #1d3557;
+  margin-bottom: 1rem;
+}
+
+.about-page p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+/* === Modal (Contact) === */
 .modal {
   display: none;
   position: fixed;
@@ -162,7 +239,7 @@ header {
   cursor: pointer;
 }
 
-/* Footer */
+/* === Footer === */
 footer {
   background-color: #1d3557;
   color: #fff;
@@ -171,7 +248,7 @@ footer {
   margin-top: 4rem;
 }
 
-/* Responsive */
+/* === Responsive Design === */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -189,5 +266,23 @@ footer {
 
   .hamburger {
     display: block;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  .services-hero h1,
+  .about-page h1 {
+    font-size: 2rem;
   }
 }
