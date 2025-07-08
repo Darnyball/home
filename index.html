@@ -3,14 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ACH DataWorks Consulting</title>
+  <title>Services - ACH DataWorks</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-    }
     body {
+      margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: #f7f9fc;
       color: #333;
@@ -22,145 +19,59 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      z-index: 10;
-      position: relative;
     }
-    .logo-title {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      text-decoration: none;
-      color: white;
-    }
-    .logo-title img {
-      height: 32px;
-      width: auto;
+    header img {
+      height: 48px;
     }
     nav a {
       color: white;
       margin-left: 1.5rem;
       text-decoration: none;
     }
-    .hero {
-      position: relative;
-      width: 100%;
-      min-height: calc(100vh - 160px);
-      background-image: url('images/background.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 4rem 2rem;
-      color: white;
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 0;
-    }
-    .hero h1, .hero p, .hero a {
-      position: relative;
-      z-index: 1;
-    }
-    .hero h1 {
-      font-size: 2.75rem;
-      margin-bottom: 1rem;
-      transition: transform 0.3s ease;
-    }
-    .hero h1:hover {
-      transform: scale(1.05);
-    }
-    .hero p {
-      font-size: 1.3rem;
-      max-width: 600px;
-      margin: 0 auto;
-      transition: transform 0.3s ease;
-    }
-    .hero p:hover {
-      transform: scale(1.03);
-    }
-    .button {
-      display: inline-block;
-      margin-top: 2rem;
-      background-color: #00c49a;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      text-decoration: none;
-      border-radius: 5px;
-      z-index: 1;
-      position: relative;
-      transition: background-color 0.3s ease;
-    }
-    .button:hover {
-      background-color: #00a881;
+    nav a:hover {
+      text-decoration: underline;
     }
     section {
       padding: 3rem 2rem;
-    }
-    section:not(.hero) {
       max-width: 900px;
       margin: auto;
     }
-    h2 {
+    h1 {
       color: #0077cc;
+      text-align: center;
+    }
+    ul {
+      padding-left: 1.5rem;
+      line-height: 1.7;
     }
     footer {
       background-color: #333;
       color: white;
       text-align: center;
       padding: 1rem;
-      position: relative;
-      z-index: 10;
+      margin-top: 4rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <a href="index.html" class="logo-title">
-      <img src="images/ACH DataWorks (1).png" alt="ACH DataWorks Logo" />
-      <strong>ACH DataWorks</strong>
-    </a>
+    <img src="images/logo.png" alt="ACH DataWorks Logo" />
     <nav>
+      <a href="index.html">Home</a>
       <a href="services.html">Services</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <h1>Turning Data into Direction</h1>
-    <p>ACH DataWorks helps small businesses and creators make smarter decisions through clear, actionable analytics.</p>
-    <a class="button" href="contact.html">Get a Free Data Audit</a>
-  </section>
-
   <section>
-    <h2>What We Offer</h2>
+    <h1>What We Offer</h1>
     <ul>
       <li><strong>Performance Analytics</strong> – Track and understand your content or business performance</li>
       <li><strong>Growth Insights</strong> – Uncover trends, optimize strategy, forecast outcomes</li>
       <li><strong>Automation & Reporting</strong> – Set up smart, repeatable tracking systems</li>
       <li><strong>Custom Consulting</strong> – Personalized help making sense of your data</li>
     </ul>
-  </section>
-
-  <section>
-    <h2>About</h2>
-    <p>Hi, I'm the founder of ACH DataWorks. I'm a finance major passionate about helping creators and small teams unlock insights from their data. My goal is simple: give you clarity, fast. No fluff, no BS — just direction.</p>
-  </section>
-
-  <section>
-    <h2>Contact</h2>
-    <p>Ready to work together?</p>
-    <p>Email: <a href="mailto:hello@achdataworks.com">hello@achdataworks.com</a></p>
   </section>
 
   <footer>
