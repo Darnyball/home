@@ -14,33 +14,8 @@
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      color: white;
       background-color: #f7f9fc;
-    }
-
-    header, footer {
-      background-color: #0077cc;
       color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    nav a {
-      color: white;
-      margin-left: 1.5rem;
-      text-decoration: none;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      background-color: #333;
-      justify-content: center;
-      text-align: center;
     }
 
     .hero {
@@ -88,6 +63,7 @@
     .hero p {
       font-size: 1.3rem;
       max-width: 600px;
+      margin: 0 auto;
       transition: transform 0.3s ease;
     }
 
@@ -105,16 +81,12 @@
       border-radius: 5px;
       z-index: 1;
       position: relative;
-      transition: transform 0.3s ease, background-color 0.3s ease;
+      transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
-.button:hover {
-  background-color: #00a881;
-  transform: scale(1.05);
-    }
-
-    img.logo {
-      height: 48px;
+    .button:hover {
+      background-color: #00a881;
+      transform: scale(1.05);
     }
   </style>
 </head>
