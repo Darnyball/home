@@ -3,70 +3,104 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services | ACH DataWorks Consulting</title>
+  <title>Services | ACH DataWorks</title>
+  <link rel="icon" type="image/png" href="images/logo.png" />
   <style>
-    html, body {
+    * {
       margin: 0;
       padding: 0;
-      width: 100%;
+      box-sizing: border-box;
     }
+
+    html, body {
+      max-width: 100vw;
+      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+    }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f7f9fc;
-      color: #333;
+      background: url('images/background.png') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
-    section {
-      padding: 3rem 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    h1, h2 {
-      color: #0077cc;
-      margin-bottom: 1rem;
-    }
-
-    ul {
-      padding-left: 1.5rem;
-    }
-
-    .button {
-      display: inline-block;
-      margin-top: 2rem;
-      background-color: #00c49a;
+    .content {
+      padding: 4rem 2rem;
       color: white;
-      padding: 0.75rem 1.5rem;
-      text-decoration: none;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease;
+      flex-grow: 1;
     }
 
-    .button:hover {
-      background-color: #00a681;
-      transform: scale(1.05);
+    .content h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .service-list {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .service {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 10px;
+    }
+
+    .service h2 {
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+    }
+
+    .service p {
+      font-size: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .content h1 {
+        font-size: 1.8rem;
+      }
+
+      .service h2 {
+        font-size: 1.2rem;
+      }
+
+      .service p {
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
 <body>
   <div id="header"></div>
 
-  <section>
-    <h1>What We Offer</h1>
-    <ul>
-      <li><strong>Performance Analytics</strong> – Track and understand your content or business performance</li>
-      <li><strong>Growth Insights</strong> – Uncover trends, optimize strategy, forecast outcomes</li>
-      <li><strong>Automation & Reporting</strong> – Set up smart, repeatable tracking systems</li>
-      <li><strong>Custom Consulting</strong> – Personalized help making sense of your data</li>
-    </ul>
-    <button class="button" onclick="openModal()">Contact Us</button>
-  </section>
+  <div class="content">
+    <h1>Our Services</h1>
+    <div class="service-list">
+      <div class="service">
+        <h2>Free Data Audit</h2>
+        <p>A comprehensive look at your current data usage and opportunities for improvement—no cost, no obligation.</p>
+      </div>
+      <div class="service">
+        <h2>Custom Dashboards</h2>
+        <p>We build intuitive dashboards that display your key performance metrics clearly and visually.</p>
+      </div>
+      <div class="service">
+        <h2>Market & Trend Analysis</h2>
+        <p>Gain competitive insights and understand your market landscape through custom analysis and reporting.</p>
+      </div>
+      <div class="service">
+        <h2>Automated Reports</h2>
+        <p>Save time with scheduled reports delivered directly to your inbox—weekly, monthly, or on demand.</p>
+      </div>
+    </div>
+  </div>
 
   <div id="footer"></div>
-  <div id="contactBox"></div>
+  <div id="contact-modal"></div>
 
   <script>
     async function loadHTML(id, file) {
@@ -75,17 +109,14 @@
       document.getElementById(id).innerHTML = html;
     }
 
+    function openModal() {
+      const modal = document.getElementById("contactModal");
+      if (modal) modal.style.display = "flex";
+    }
+
     loadHTML("header", "header.html");
     loadHTML("footer", "footer.html");
-    loadHTML("contactBox", "contact-modal.html");
-
-    function openModal() {
-      document.getElementById("contactModal").style.display = "flex";
-    }
-
-    function closeModal() {
-      document.getElementById("contactModal").style.display = "none";
-    }
+    loadHTML("contact-modal", "contact-modal.html");
   </script>
 </body>
 </html>
