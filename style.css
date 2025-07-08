@@ -58,7 +58,13 @@ header {
   background: url('images/background.jpg') center center / cover no-repeat;
   color: #fff;
   position: relative;
-  min-height: 60vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  min-height: calc(100vh - 160px); /* adjust this if needed */
 }
 
 .hero::before {
